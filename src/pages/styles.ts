@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export default {
   Container: styled.div`
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    position: relative;
+    position: relative; 
     background: url("/retrato-de-mulher-trabalhadora-de-atendimento-ao-cliente.webp");
     background-position: center center;
     background-repeat: no-repeat;
@@ -18,5 +18,8 @@ export default {
     @media only screen and (max-width: 990px) {
       width: fit-content;
     }
+`,
+Footer: styled.div`
+    width: 100%;
 `,
 };

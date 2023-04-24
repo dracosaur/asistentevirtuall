@@ -9,7 +9,9 @@ export default function Home() {
     <S.Container>
       <Header />
       <ContentControll />
-      <Footer />
+      <S.Footer>
+        <Footer />
+      </S.Footer>
     </S.Container>
   )
 }

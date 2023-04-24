@@ -3,6 +3,7 @@ import styled from "styled-components";
 export default {
   Container: styled.div`
     padding: 60px;
+    margin-bottom: 200px;
 
     display: flex;
     flex-direction: column;
@@ -61,9 +62,17 @@ export default {
   `,
   LeftContent: styled.div`
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media only screen and (max-width: 990px) {
       width: 100%;
+    }
+
+
+    img {
+      width: 65%;
     }
   `,
   RightContent: styled.div`
@@ -74,6 +83,7 @@ export default {
     }
   `,
   List: styled.div`
+    width: 100%;
     display: flex;
     flex-direction: row;
     gap: 8px;

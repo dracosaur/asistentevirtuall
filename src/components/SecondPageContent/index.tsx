@@ -1,8 +1,9 @@
+
+import { BackIcon } from '../Basics/Icons/BackIcon';
 import { Form } from '../Form';
-import { linguage, smartphones, states, yesOrNot } from './data';
 import S from './styles';
 
-export const  SecondPageContent = ({backStep}: any) => {
+export default function SecondPageContent({backStep}: any)  {
   return (
     <S.Container>
         <S.TitleContainer>
@@ -12,17 +13,18 @@ export const  SecondPageContent = ({backStep}: any) => {
         </S.TitleContainer>
         <S.ModalContainer>
             <S.LeftContent>
-                <S.Text>{'Actualmente estamos reclutando nuevas personas para trabajar como Asistente Virtual. Estas vacantes son remotas.'}</S.Text>
+              <S.LeftContentText>
+                <S.FormMainTitle>{'Estás postulándote para el puesto de'}</S.FormMainTitle>
+                <S.FormTitle>{'Asistente Virtual'}</S.FormTitle>
+                <S.FormSubtitle>{'Para aplicar a esta posición, por favor completa el siguiente formulario.'}</S.FormSubtitle>
+              </S.LeftContentText>
             </S.LeftContent>
             <S.RightContent>
-                <S.Button onClick={() => backStep()}>{'Quiero aplicar para el puesto'}</S.Button>
+              <S.FormContainer>
+                <Form {...{backStep}}/>
+              </S.FormContainer>
             </S.RightContent>
-            <S.FormContainer>
-              <Form />
-            </S.FormContainer>
         </S.ModalContainer>
     </S.Container>
   )
 }   
-
-export default SecondPageContent;

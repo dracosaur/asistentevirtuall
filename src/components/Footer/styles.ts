@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export default {
   Container: styled.div`
+    position: absolute;
+    bottom: 0;
     width: -webkit-fill-available;
     padding: 24px;
     padding: 20px;
-    height: 164px;
 
     display: flex;
     flex-direction: row;

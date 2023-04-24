@@ -3,6 +3,8 @@ import styled from "styled-components";
 export default {
   Container: styled.div`
     padding: 60px;
+    margin-bottom: 200px;
+
 
     display: flex;
     flex-direction: column;
@@ -61,10 +63,20 @@ export default {
   `,
   LeftContent: styled.div`
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 30px;
 
     @media only screen and (max-width: 990px) {
       width: 100%;
     }
+  `,
+  LeftContentText: styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   `,
   RightContent: styled.div`
     width: 50%;
@@ -105,15 +117,6 @@ export default {
     background-color: white;
     border: 1px solid black;
     color: black;
-  `,
-  Button: styled.input`
-    height: ${({height}) => height};
-    background-color: white;
-    border: 1px solid #1d1e1c;
-    border-radius: 8px;
-    padding: 0 16px;
-    color: black;
-    width: ${({width}) => width};
   `,
   ButtonText: styled.small`
     font-size: 12px;
@@ -159,10 +162,40 @@ export default {
     font-size: 23px;
     font-weight: 700;
   `,
+  BackButton: styled.div`
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    font-family: "Spartan", Sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+  `,
   AboutContent: styled.p`
     color: #FFFFFF;
     font-family: "Spartan", Sans-serif;
     font-size: 18px;
     font-weight: 700;
+  `,
+  FormMainTitle: styled.p`
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Roboto", Sans-serif;
+    font-size: 19px;
+  `,
+  FormTitle: styled.p`
+    text-align: center;
+    color: #B000FF;
+    font-family: "Spartan", Sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+  `,
+  FormSubtitle: styled.p`
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "Roboto", Sans-serif;
+    font-size: 17px;
   `,
 };  

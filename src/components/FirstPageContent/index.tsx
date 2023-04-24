@@ -2,7 +2,7 @@ import { CheckIcon } from '../Basics/Icons/CheckIcon';
 import { list, about } from './data';
 import S from './styles';
 
-const FirstPageContent = ({ nextStep }: any) => {
+export default function FirstPageContent({ nextStep }: any) {
   return (
     <S.Container>
         <S.TitleContainer>
@@ -19,6 +19,7 @@ const FirstPageContent = ({ nextStep }: any) => {
                 </S.List>
                 ))}
                 <S.Text>{'Actualmente estamos reclutando nuevas personas para trabajar como Asistente Virtual. Estas vacantes son remotas.'}</S.Text>
+                <img src='/imagens para pv (15) (1).png' />
             </S.LeftContent>
             <S.RightContent>
                 { about.map(({id, title, description}) => (
@@ -35,4 +36,4 @@ const FirstPageContent = ({ nextStep }: any) => {
   )
 }  
 
-export default FirstPageContent;
+  

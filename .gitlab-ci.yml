@@ -1,0 +1,33 @@
+########################################################
+#               Pipeline deploy - staging              #
+#         Professional en Digitacion - techForge       #
+########################################################
+
+image: alpine:3.7
+
+# Pipeline Stages
+stages:
+  - deploy
+
+# Deploy to staging server branch dev
+deploy_stage:
+  image: alpine:3.7
+  stage: deploy
+  before_script:
+    # instalação e configuração do ssh-agent para deploy no servidor de staging
+    - echo "Deploying to developer"
+    - "comand -v ssh-agent /dev/null || ( apk add --update openssh-client)"
+    # Necessário para correto funcionamento do ssh-agent e da correta leitura das variaveis de ambiente (eval.....)
+    - eval $(ssh-agent -s)
+    - echo "$PCMARTINA" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $IP_DEV >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    # Start deploy to developer
+    - ssh -o StrictHostKeyChecking=no $USER_DEV@$IP_DEV "cd /var/www/html/profesionaldigitacion.com && git pull origin techforge"
+    - echo "Deployed to dev environment"
+  # End deploy to developer
+  only:
+    - master

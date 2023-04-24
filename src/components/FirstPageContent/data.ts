@@ -30,12 +30,12 @@ export const about = [
         description: 'Debes tener acceso a al menos uno de los siguientes dispositivos: iPhone, iPad, smartphone Android, tableta Android.'
     },
     {
-        id: 1,
+        id: 3,
         title: 'HORAS POR SEMANA: FLEXÍVEL',
         description: ''
     },
     {
-        id: 1,
+        id: 4,
         title: 'LOCAL',
         description: 'Trabajo remoto en línea. Actualmente estamos ampliando significativamente la cantidad de trabajadores remotos para estas vacantes debido a la demanda.'
     }

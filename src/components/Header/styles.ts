@@ -7,6 +7,7 @@ export default {
     padding: 24px;
   `,
   Content: styled.div`
+    cursor: pointer;
   `,
   Image: styled.img`
     width: 99px;
