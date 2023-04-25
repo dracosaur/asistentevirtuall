@@ -10,7 +10,7 @@ module.exports = {
       version: "12",
     },
   },
-  extends: ["plugin:react/recommended", "google", "prettier"],
+  extends: ["plugin:react/recommended", "prettier"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
