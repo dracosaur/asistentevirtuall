@@ -6,7 +6,7 @@ export default function FirstPageContent({ nextStep }: any) {
   return (
     <S.Container>
         <S.TitleContainer>
-            <S.MainTitle>{'CONTRATANDO'}</S.MainTitle>
+            <S.MainTitle>{'CONTsRATANDO'}</S.MainTitle>
             <S.Title>{'Asistente Virtual'}</S.Title>
             <S.Subtitle>{'Gana dinero por trabajar como Asistente Virtual'}</S.Subtitle>
         </S.TitleContainer>
